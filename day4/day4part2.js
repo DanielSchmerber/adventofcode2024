@@ -30,8 +30,8 @@ let filters =
     ]
 let matchcounter = 0;
 for(let filter of filters) {
-    for (let x = 0; x < playingField.length; ++x) {
-        for (let y = 0; y < playingField[0].length; ++y) {
+    for (let x = 0; x < playingField.length-2; ++x) {
+        for (let y = 0; y < playingField[0].length-2; ++y) {
             let char = charAtPlayingField(x, y, playingField)
 
             let match = checkFilter(filter,x,y,playingField)

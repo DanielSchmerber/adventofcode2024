@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import {readInput} from "../util.js";
 let combinedInput = ""
+let ms = Date.now()
 let input = [...readInput("./input.txt")]
 
 let fast = true;
@@ -132,3 +133,4 @@ for(let x of playingField){
 }
 
 console.dir(`Found ${xmasCounter} Christmases`)
+console.dir("Took " + (Date.now()-ms) + " ms")

@@ -1,6 +1,8 @@
 import fs from "node:fs";
 import {charAtPlayingField, inputToPlayingField, readInput} from "../util.js";
 let combinedInput = ""
+let ms = Date.now()
+
 let input = [...readInput("./input.txt")]
 
 let playingField = inputToPlayingField(input)
@@ -51,7 +53,7 @@ function checkFilter(filter,xStart,yStart,playingField){
             let filterChar = filter[y][x]
 
             if(filterChar == "*" || char==filterChar){
-                console.log(filters.indexOf(filter) + " matched")
+
             }else{
                 return false
             }
@@ -59,4 +61,4 @@ function checkFilter(filter,xStart,yStart,playingField){
     }
     return true
 }
-
+console.dir("Took " + (Date.now()-ms) + " ms")

@@ -48,7 +48,6 @@ function fixLine(array){
 
 }
 
-console.dir(`Updated line ${result.wronglines[0]}`)
 
 function breakesRule(number,visitedNumbers,rules) {
 

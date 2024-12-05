@@ -7,14 +7,12 @@ function swap(a,b,array){
     let temp = array[a]
     array[a] = array[b]
     array[b] = temp;
-    console.dir(array)
 }
 
 for(let line of result.wronglines){
     fixLine(line)
 }
 
-console.dir(result.wronglines[0])
 
 function fixLine(array){
 
@@ -33,16 +31,9 @@ function fixLine(array){
             let forbiddenNumber = breakesRule(currentNum, visitedNumbers, result.rules)
 
             if (forbiddenNumber != undefined) {
-                console.dir(`the number ${currentNum} is not before ${forbiddenNumber} `)
                 legalLine = false;
-
-                console.dir(array)
-                console.dir(i)
-                console.dir(array.indexOf(forbiddenNumber))
-
                 swap(i, array.indexOf(forbiddenNumber), array)
 
-                console.dir(array)
             }
 
 

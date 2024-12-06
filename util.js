@@ -20,6 +20,15 @@ export function inputToPlayingField(input){
     }
     return playingField;
 }
+export function degrees_to_radians(degrees)
+{
+    // Store the value of pi.
+    var pi = Math.PI;
+    // Multiply degrees by pi divided by 180 to convert to radians.
+    return degrees * (pi/180);
+}
+
+
 export function charAtPlayingField(x,y,playingField){
     if(!playingField[x]){
         return undefined

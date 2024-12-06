@@ -1,5 +1,6 @@
 import {readInput} from "../util.js";
 import fs from "node:fs";
+let ms = Date.now()
 export function generateWrongLines() {
     let input = [...readInput("./input.txt")]
     let rules = [...readInput("./rules.txt")]
@@ -62,6 +63,7 @@ export function generateWrongLines() {
         wronglines:wrongLines,
         rules:rulesOjects}
 }
-
+generateWrongLines()
+console.dir("Took " + (Date.now()-ms) + " ms")
 
 

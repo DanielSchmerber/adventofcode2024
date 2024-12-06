@@ -1,4 +1,5 @@
 import {generateWrongLines} from "./day5.js";
+let ms = Date.now()
 
 let result = generateWrongLines()
 
@@ -68,3 +69,4 @@ for(let line of result.wronglines){
 
 }
 console.dir(sum)
+console.dir("Took " + (Date.now()-ms) + " ms")

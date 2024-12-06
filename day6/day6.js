@@ -80,7 +80,6 @@ export function checkLoop() {
             y: guard.y,
             rotation: guard.rotation
         }))) {
-            console.log("Guard stuck in a loop")
             return true;
             break
         }
@@ -103,7 +102,6 @@ export function checkLoop() {
             y: guard.y + step.y
         }
         if (isInBounds(newPos)) {
-            console.log("guard left")
             return false;
             break
         }
@@ -114,7 +112,6 @@ export function checkLoop() {
             guard.x = newPos.x
             guard.y = newPos.y
 
-            playingField[guard.x][guard.y] = "V"
 
             //printPlayingField()
 
@@ -127,22 +124,22 @@ export function checkLoop() {
 
 let counter = 0;
 for(let x in playingField){
+    console.log("test" + counter)
     for(let y in playingField[0]){
-        console.log(`checking ${x + " " + y}`)
-        {
-            loadPlayingfield()
+
+        let old = playingField[x][y]
             playingField[x][y] = "#"
             //printPlayingField()
             if(checkLoop()){
                 counter++;
             }
             //printPlayingField()
-            playingField[x][y] = "."
+            playingField[x][y] = old
 
         }
 
 
-    }
+
 }
 
 checkLoop()
